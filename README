@@ -1,0 +1,21 @@
+e.dozortseva
+evgeniya.dozortseva@mail.huji.ac.il 33268173 Evgeniya Dozortseva
+Project 1
+FILES:
+Not.hdl // Not chip hdl code
+And.hdl // And chip hdl code
+Or.hdl // Or chip hdl code
+Xor.hdl // Xor chip hdl code
+Mux.hdl // Multiplexor chip hdl code
+DMux.hdl // Demultiplexor chip hdl code
+
+Not16.hdl // 16 bit Not chip hdl code
+And16.hdl // 16 bit And chip hdl code
+Or16.hdl //16 bit Or chip hdl code
+Mux16.hdl // 16 bit Multiplexor hdl code
+
+Or8Way.hdl // 8 way Or chip hdl code
+Mux4Way16.hdl // 4 way 16 bit Multiplexor hdl code
+Mux8Way16.hdl // 8 way 16 bit Multiplexor hdl code
+DMux4Way.hdl // 4 way Demultiplexor chip hdl code
+DMux8Way.hdl // 8 way Demultiplexor chip hdl code

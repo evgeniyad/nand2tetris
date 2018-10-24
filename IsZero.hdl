@@ -1,0 +1,26 @@
+//the chip determines if the input is zero
+//out = 1 iff in==0
+CHIP IsZero {
+
+    IN  in[16];
+    OUT out;
+
+    PARTS:
+    Or(a=in[0], b=in[0], out=bitzero);
+    Or(a=bitzero, b=in[1], out=bitone);
+    Or(a=bitone, b=in[2], out=bittwo);
+    Or(a=bittwo, b=in[3], out=bitthree);
+  	Or(a=bitthree, b=in[4], out=bitfour);
+  	Or(a=bitfour, b=in[5], out=bitfive);
+  	Or(a=bitfive, b=in[6], out=bitsix);
+  	Or(a=bitsix, b=in[7], out=bitseven);
+  	Or(a=bitseven, b=in[8], out=biteight);
+  	Or(a=biteight, b=in[9], out=bitnine);
+  	Or(a=bitnine, b=in[10], out=bitten);
+  	Or(a=bitten, b=in[11], out=biteleven);
+  	Or(a=biteleven, b=in[12], out=bittwelve);
+  	Or(a=bittwelve, b=in[13], out=bitthirteen);
+  	Or(a=bitthirteen, b=in[14], out=bitfourteen);
+  	Or(a=bitfourteen, b=in[15], out=bitfifteen);
+  	Not(in=bitfifteen, out=out);
+}

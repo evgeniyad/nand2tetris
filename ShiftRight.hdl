@@ -1,0 +1,30 @@
+/**
+ * 16-bit shift right which
+ is equivalent to division by 2 (with rounding toward negative infinity):
+ * out = in : 2
+ */
+CHIP ShiftRight{
+    IN in[16];
+    OUT out[16];
+     
+    PARTS:
+    Keeper(in=in[1], out=out[0]);
+	Keeper(in=in[2], out=out[1]);
+	Keeper(in=in[3], out=out[2]);
+	Keeper(in=in[4], out=out[3]);
+	Keeper(in=in[5], out=out[4]);
+	Keeper(in=in[6], out=out[5]);
+	Keeper(in=in[7], out=out[6]);
+	Keeper(in=in[8], out=out[7]);
+	Keeper(in=in[9], out=out[8]);
+	Keeper(in=in[10], out=out[9]);
+	Keeper(in=in[11], out=out[10]);
+	Keeper(in=in[12], out=out[11]);
+	Keeper(in=in[13], out=out[12]);
+	Keeper(in=in[14], out=out[13]);
+	Not(in=in[15], out=notinmbs); //instead of using two more Keepers for bits 14,15
+								// which is 4 nand gates, we are using 3 nand gates in 
+								// name of efficiency
+	Not(in=notinmbs, out=out[14]);
+	Not(in=notinmbs, out=out[15]);
+}

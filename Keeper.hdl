@@ -1,0 +1,13 @@
+
+/**
+ * 1-bit input keeper 
+ * out = in
+ */
+ CHIP Keeper{
+    IN in;
+    OUT out;
+     
+    PARTS:
+    Not(in=in, out=notin);
+    Not(in=notin, out=out);
+}

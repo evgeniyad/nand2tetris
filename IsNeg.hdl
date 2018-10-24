@@ -1,0 +1,10 @@
+//the chip determines if the input is negative
+//out = 1 iff in is negative
+CHIP IsNeg {
+
+    IN  in[16];
+    OUT out;
+
+    PARTS:
+    And(a=in[15], b=in[15], out=out); // if input is neg - MBS will be 1
+}
